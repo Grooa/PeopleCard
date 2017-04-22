@@ -7,25 +7,34 @@
     border: 1px solid #CCC;
     border-radius: 2px;
 
+    cursor: default;
+
+    display: flex;
+
+    flex-direction: column;
+
     justify-content: space-between;
 
     height: 13em;
 
-    margin: 1em auto;
+    margin: 0 auto;
 
     overflow: hidden;
 
-    position: relative;
-
     text-align: left;
+    transition: all .2s ease;
 
     width: 10em;
-
-    transition: all .2s ease;
 }
 
 .card:hover {
     box-shadow: rgba(0, 0, 0, .1) 1px 1px 3px;
+}
+
+.card a {
+    cursor: pointer;
+
+    text-decoration: none;
 }
 
 .card h4,
@@ -41,8 +50,6 @@
 .card .profile-image {
     background-color: #FFF;
 
-    flex-shrink: 0;
-
     height: 6.5em;
 
     width: 100%;
@@ -56,14 +63,7 @@
 }
 
 .card .readmore {
-    cursor: pointer;
-
-    display: block;
-
     border:none;
-
-    position: absolute;
-    bottom: 0;
 
     width: 100%;
 }

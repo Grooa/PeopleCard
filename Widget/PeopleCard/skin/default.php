@@ -18,5 +18,4 @@ ipAddCss('../assets/peopleCard.css');
             <button id="profileButton" class="readmore">Read more</button>
         </a>
     <?php endif; ?>
-
 </section>
