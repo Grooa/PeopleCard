@@ -10,7 +10,7 @@ ipAddCss('../assets/peopleCard.css');
     </div>
     <h4 id="profileName" class="name"><?php echo isset($name) && $name != '' ? $name : '[missing name]'?></h4>
     <?php if (!empty($position)): ?>
-        <em id="profilePosition" class="position">position: <?= $position ?></em>
+        <em id="profilePosition" class="position"><?= $position ?></em>
     <?php endif; ?>
 
     <?php if (isset($url) && $url != null): ?>

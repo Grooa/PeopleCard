@@ -1,12 +1,18 @@
 <?php
-ipAddCss('../assets/personCard.css');
+//ipAddCss('../assets/peopleCard.css');
 //echo ipHead();
 ?>
 
 <section class="card small">
-    <div class="profile-image">
-        <?php echo ipBlock('profileImage')->render(); ?>
+    <?php if (isset($img) && !empty($img)): ?>
+        <div class="profile-image">
+            <img id="image" src="<?= ipFileUrl('file/repository/' . $img[0]); ?>"
+                 alt="<?= isset($name) ? $name : '' ?>">
+        </div>
+    <?php endif; ?>
+
+    <div class="metadata">
+        <h4><?php echo isset($name) ? $name : '[missing name]' ?></h4>
+        <em>position: <?php echo isset($position) ? $position : '' ?></em>
     </div>
-    <h4><?php echo isset($name) ? $name : '[missing name]'?></h4>
-    <em>position: <?php echo isset($position) ? $position : '' ?></em>
 </section>
